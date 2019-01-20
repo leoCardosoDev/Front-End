@@ -1,0 +1,40 @@
+.element{
+    float: left;
+    width: 400px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    transition: all .8s ease;
+}
+
+.front, .back{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: all .8s ease-in
+}
+
+.front img{
+    width: 100%;
+    height: 100%;
+}
+
+.back{
+    background-color: #085488;
+    opacity: 0.8;
+    color: #fff;
+    text-align: center;
+    top: -100%;
+    transition: all .8s ease;
+}
+
+.element:hover{
+    transform: scale(1.02);
+}
+.element:hover .back{
+    top: 0;
+    padding-top: 25%;
+}

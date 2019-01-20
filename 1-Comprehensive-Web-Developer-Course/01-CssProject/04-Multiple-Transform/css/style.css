@@ -1,0 +1,41 @@
+.element{
+    float: left;
+    width: 400px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    transition: all .8s ease;
+}
+
+.front, .back{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all .8s ease-in
+}
+
+.front{
+    z-index: 2;
+    transform-origin: left;
+}
+
+.front img{
+    width: 100%;
+    height: 100%;
+}
+
+.back{
+    background-color: #1e824c;
+    opacity: 0.8;
+    color: #fff;
+    text-align: center;
+    transition: all .8s ease;
+    z-index: 1;
+}
+
+.element:hover .front{
+    transform: rotateY(90deg);
+}
